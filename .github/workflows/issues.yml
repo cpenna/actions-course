@@ -7,4 +7,4 @@ jobs:
   output-event:
     runs-on: ubuntu-latest
     run: echo "Issue opened"
-    run: "echo ${{ github }}"
+    run: echo "${{ toJSON(github) }}"
