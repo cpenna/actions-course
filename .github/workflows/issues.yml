@@ -1,0 +1,10 @@
+name: issues
+run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  issues:
+    types: [opened]
+jobs:
+  output-event:
+    runs-on: ubuntu-latest
+    run: echo "Issue opened"
+    run: "echo ${{ github }}"
