@@ -1,11 +1,9 @@
 name: issues
 run-name: ${{ github.actor }} is learning GitHub Actions
-on:
-  issues:
-    types: [opened]
+on: issues
 jobs:
   output-event:
-  steps:
     runs-on: ubuntu-latest
-    run: echo "Issue opened"
-    run: echo "${{ toJSON(github.event) }}"
+    steps:
+      - name: Output event details
+        run: echo "${{ toJSON(github.event) }}"
