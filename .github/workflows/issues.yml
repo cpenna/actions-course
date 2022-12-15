@@ -5,6 +5,7 @@ on:
     types: [opened]
 jobs:
   output-event:
+  steps:
     runs-on: ubuntu-latest
     run: echo "Issue opened"
-    run: echo "${{ toJSON(github) }}"
+    run: echo "${{ toJSON(github.event) }}"
