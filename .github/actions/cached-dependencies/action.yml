@@ -3,6 +3,7 @@ description: 'Get and cache dependencies (via npm)'
 inputs:
   use-cache:
     description: Defined whether cache should be used, default is true.
+    required: false
     default: 'true'
 runs:
   using: composite
